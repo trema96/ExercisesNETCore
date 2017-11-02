@@ -1,0 +1,33 @@
+﻿@model Ex1.Models.Person
+
+<body>
+    <section>
+        <header>
+            Heyo
+        </header>
+        @using (Html.BeginForm())
+        {
+            <p>
+                @Html.LabelFor(x => x.Name)
+                @Html.TextBoxFor(x => x.Name)
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Birthday)
+                @Html.TextBoxFor(x => x.Birthday, new { type = "date" })
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Email)
+                @Html.TextBoxFor(x => x.Email, new { type = "email" })
+            </p>
+
+            <p>
+                @Html.LabelFor(x => x.Phone)
+                @Html.TextBoxFor(x => x.Phone, new { type = "number" })
+            </p>
+
+            <input type="submit" name="Submit" value="Save" />
+        }
+    </section>
+</body>

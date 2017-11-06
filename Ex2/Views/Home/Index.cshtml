@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Ex1.Models.Person>
+<h1>Your info</h1>
+@foreach (var item in Model)
+{
+    <p>@item.Name</p>
+    <p>@item.Birthday</p>
+    <p>@item.Email</p>
+    <p>@item.Phone</p>
+    <hr />
+}

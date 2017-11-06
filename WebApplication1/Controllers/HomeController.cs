@@ -27,7 +27,9 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Store(Ex1.Models.Person person)
         {
-            HttpContext.Session.Set("Person", person);
+            if (ModelState.IsValid) { 
+                HttpContext.Session.Set("Person", person);
+            }
             return View();
         }
     }
